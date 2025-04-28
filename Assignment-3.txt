@@ -1,0 +1,21 @@
+1. What is the Emmet shortcut used to create HTML boilerplate?
+   Use the Emmet shortcut "!" and press Tab
+
+2. In HTML, what is DOCTYPE?
+   DOCTYPE instructs the browser on which HTML version to use
+
+3. Describe a void element and provide an example.
+   Void elements are self-closing tags, such as <img>, <br>, <input>, and <meta>
+
+4. How Do Elements and Attributes Differ From One Another?
+   The primary building blocks of HTML are elements (Ex:<h1>, <p>), and attributes provide extra details about elements
+   Ex:href in the anchor tag
+
+5. Describe HTML Entities and Explain Their Use in HTML.
+   To prevent them from being confused with HTML tags, HTML entities are special codes for characters like < and >. Ex:for < -$lt
+
+6. Describe Meta Tags and Explain Their Use.
+   Meta tags give the page description. They are employed in SEO. Ex: <meta charset="UTF-8">
+
+7. How Should Images Be Added to a Website?
+   Make use of both local images and CDN/external links when using the <img> tag

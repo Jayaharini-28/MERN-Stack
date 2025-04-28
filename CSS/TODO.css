@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.main_container {
+  background-image: url("https://ik.imagekit.io/m57vnn8nm/MERN%20/TODO/todolistbg.png_updatedAt=1700761069523?updatedAt=1745333755867");
+  height: 600px;
+  width: 310px;
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+.para1 {
+  color: white;
+  text-align: center;
+  font-size: 13.5px;
+  font-family: "Roboto";
+}
+#para2 {
+  color: white;
+  font-size: 17px;
+  font-family: "Roboto";
+}
+
+.para3 {
+  color: white;
+  font-size: 13.6px;
+  font-family: "Roboto";
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button1 {
+  color: white;
+  font-size: 16px;
+  background-color: orange;
+  padding: 7px 17px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  font-family: "Roboto", sans-serif;
+}
+.para4 {
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  text-decoration: underline;
+  font-family: "Roboto";
+}

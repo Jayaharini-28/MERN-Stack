@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Places</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="bg-gray-100">
+    <!-- Places Main Container -->
+    <div class="place-main-container max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg">
+        <h1 class="font-[Poppins] text-[30px] text-black mb-6 text-center">Favorite Places</h1>
+
+        <!-- Place Card 1 -->
+        <div class="place-container bg-white rounded-lg shadow-md mb-6 flex justify-between items-center p-4" data-name="Taj Mahal">
+            <div>
+                <h2 class="text-blue-700 text-[20px]">Taj Mahal</h2>
+                <h2 class="text-gray-500 text-[16px]">Agra, India</h2>
+            </div>
+            <img
+                src="https://ik.imagekit.io/m57vnn8nm/MERN%20/tourist/taj-mahal-building?updatedAt=1745510433500"
+                alt="Taj Mahal"
+                class="h-24 m-2"
+            />
+        </div>
+
+        <!-- Place Card 2 -->
+        <div class="place-container bg-white rounded-lg shadow-md mb-6 flex justify-between items-center p-4" data-name="Brihadisvara Temple">
+            <div>
+                <h2 class="text-blue-700 text-[20px]">Brihadisvara Temple</h2>
+                <h2 class="text-gray-500 text-[16px]">Tamil Nadu, India</h2>
+            </div>
+            <img
+                src="./Brihadisvara.jpg"
+                alt="Brihadisvara Temple"
+                class="h-24 m-2"
+            />
+        </div>
+
+        <!-- Place Card 3 -->
+        <div class="place-container bg-white rounded-lg shadow-md mb-6 flex justify-between items-center p-4" data-name="Alappuzha Lake">
+            <div>
+                <h2 class="text-blue-700 text-[20px]">Alappuzha Lake</h2>
+                <h2 class="text-gray-500 text-[16px]">Kerala, India</h2>
+            </div>
+            <img
+                src="alappuzha.jpg"
+                alt="Alappuzha Lake"
+                class="h-24 m-2"
+            />
+        </div>
+
+        <!-- Back Button -->
+        <a href="./index.html">
+            <button class="bg-black text-white px-8 py-3 rounded-lg font-['Poppins'] mt-8 mx-auto block hover:bg-gray-800">
+                Back
+            </button>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

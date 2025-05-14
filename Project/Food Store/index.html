@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
+          <div class="flex items-center space-x-2">
+            <img
+              src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/food-munch-img.png?updatedAt=1746849816598"
+              alt="Food Munch Logo"
+              class="w-12 h-12"
+            />
+            <span class="text-[26px] font-bold text-gray-800">FoodMunch</span>
+          </div>
+
+          <!-- Menu Icon for Mobile -->
+          <div class="md:hidden">
+            <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+              <svg
+                id="menu-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden text-[20px] md:flex space-x-6">
+            <a href="#" class="text-black font-medium hover:text-gray-900"
+              >Home</a
+            >
+            <a href="#" class="text-black font-medium hover:text-gray-900"
+              >Explore</a
+            >
+            <a href="#" class="text-black font-medium hover:text-gray-900"
+              >Menu</a
+            >
+            <a href="#" class="text-black font-medium hover:text-gray-900"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden text-[20px] md:hidden bg-white shadow-md"
+      >
+        <a
+          href="#"
+          class="block py-2 px-4 text-black font-medium hover:bg-gray-100"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="block py-2 px-4 text-black font-medium hover:bg-gray-100"
+          >Explore</a
+        >
+        <a
+          href="#"
+          class="block py-2 px-4 text-black font-medium hover:bg-gray-100"
+          >Menu</a
+        >
+        <a
+          href="#"
+          class="block py-2 px-4 text-black font-medium hover:bg-gray-100"
+          >Contact</a
+        >
+      </div>
+    </nav>
+    <!-- Navigation Bar End -->
+    <!-- Hero Section -->
+    <section class="relative pt-20">
+      <div
+        class="relative bg-cover bg-black bg-center h-[600px] flex items-center justify-center"
+        style="
+          background-image: url('https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/artisanal-food-presentation-balanced-plating-incorporating-color-texture-created-generative-ai-281090897.jpg?updatedAt=1747067878332');
+        "
+      >
+        <div class="p-8 rounded-lg text-center">
+          <!-- Hero Title -->
+          <h1 class="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
+            Get Delicious Food Anytime
+          </h1>
+          <!-- Hero Subtitle -->
+          <p class="text-[30px] md:text-xl text-white mt-2 drop-shadow-md">
+            Eat Smart & Healthy
+          </p>
+          <!-- Action Buttons -->
+          <div class="flex space-x-4 mt-6 justify-center">
+            <button
+              class="bg-[#C4A901] text-white px-5 py-2 rounded-lg hover:bg-white hover:text-black hover:border hover:border-black"
+            >
+              View Menu
+            </button>
+            <button
+              class="bg-[#C4A901] text-white px-5 py-2 rounded-lg hover:bg-white hover:border hover:border-black hover:text-black"
+            >
+              Order Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End-->
+    <!-- Why section -->
+    <section class="py-10 bg-[#f7faff]">
+      <!-- Main Container -->
+      <div class="2xl:container mx-auto">
+        <!-- Safety  container -->
+        <div class="w-[95%] mx-auto grid md:w-[75%] gap-6 py-6">
+          <div class="flex justify-center grid grid-cols-1">
+            <div class="">
+              <h1 class="text-[28px] text-[#183b56] font-roboto font-bold">
+                Why Choose Us?
+              </h1>
+              <p
+                class="text-[16px] leading-[24px] py-3 text-[#5a7184] font-family-[Roboto]"
+              >
+                We use both original recipes and classic versions of famous food
+                items.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+              <div
+                class="border bg-white rounded-xl flex flex-col items-center py-5"
+              >
+                <img
+                  src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/food-serve.png?updatedAt=1746849891478"
+                  alt="why img"
+                  class="w-18 h-18"
+                />
+                <h1 class="text-[22px] pt-2" style="color: rgb(50, 63, 75)">
+                  Food Service
+                </h1>
+                <p
+                  class="text-[16px] font-family-[Roboto] leading-[24px] text-center pb-4 pt-1 text-gray-500 px-4"
+                >
+                  Experience fine dining at the comfort of your home. All our
+                  orders are carefully packed and arranged to give you the
+                  nothing less than perfect.
+                </p>
+              </div>
+              <div
+                class="border bg-white rounded-xl flex flex-col items-center py-5"
+              >
+                <img
+                  src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/fruits-img.png?updatedAt=1746849977177"
+                  alt="why img"
+                  class="w-18 h-18"
+                />
+                <h1 class="text-[22px] pt-2" style="color: rgb(50, 63, 75)">
+                  Fresh Food
+                </h1>
+                <p
+                  class="text-[16px] font-family-[Roboto] leading-[24px] text-center text-gray-500 pb-4 pt-1 px-4"
+                >
+                  The Fresh Food group provides fresh-cut fruits and vegetables
+                  directly picked from our partner farms and farm houses so that
+                  you always get them tree to plate.
+                </p>
+              </div>
+              <div
+                class="border bg-white rounded-xl flex flex-col items-center py-5"
+              >
+                <img
+                  src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/offers-img.png?updatedAt=1746849935740"
+                  alt="why img"
+                  class="w-18 h-18"
+                />
+                <h1 class="text-[22px] pt-2" style="color: rgb(50, 63, 75)">
+                  Best Offers
+                </h1>
+                <p
+                  class="text-[16px] font-family-[Roboto] leading-[24px] text-center text-gray-500 pb-4 pt-1 px-4"
+                >
+                  Food Coupons & Offers upto
+                  <b class="text-black">50% OFF</b> and Exclusive Promo Codes on
+                  All Online Food Orders.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why section End-->
+
+    <!-- Menu Section -->
+    <section class="py-10">
+      <div class="container mx-auto">
+        <div class="w-[75%] md:w-[90%] mx-auto">
+          <p class="text-[28px] leading-[34px] font-bold text-gray-800 mb-5">
+            Explore Menu
+          </p>
+        </div>
+
+        <div
+          class="w-[75%] md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"
+        >
+          <!-- Menu Item Card 1 -->
+          <div
+            class="flex flex-col gap-3 bg-white border rounded-xl px-5 py-5 shadow-lg"
+          >
+            <img
+              src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/em-ginger-fried-img.png?updatedAt=1746939802408"
+              alt="menu image"
+              class="rounded-xl"
+            />
+            <p class="text-[18px] leading-[22px] text-gray-800 font-medium">
+              Non-Veg Starters
+            </p>
+            <div class="flex items-center gap-2">
+              <a href="#" class="flex items-center gap-1">
+                <button
+                  class="text-yellow-500 hover:text-blue-500 hover:underline"
+                >
+                  View All
+                </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="#f59e0b"
+                  stroke="#f59e0b"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-move-right-icon"
+                >
+                  <path d="M18 8l4 4-4 4M2 12h20"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- Menu Item Card 2 -->
+          <div
+            class="flex flex-col gap-3 bg-white border rounded-xl px-5 py-5 shadow-lg"
+          >
+            <img
+              src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/em-veg-starters-img.png?updatedAt=1747070578085"
+              alt="menu image"
+              class="rounded-xl"
+            />
+            <p class="text-[18px] leading-[22px] text-gray-800 font-medium">
+              Veg Starters
+            </p>
+            <div class="flex items-center gap-2">
+              <a href="#" class="flex items-center gap-1">
+                <button
+                  class="text-yellow-500 hover:text-blue-500 hover:underline"
+                >
+                  View All
+                </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="#f59e0b"
+                  stroke="#f59e0b"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-move-right-icon"
+                >
+                  <path d="M18 8l4 4-4 4M2 12h20"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- Menu Item Card 3 -->
+          <div
+            class="flex flex-col gap-3 bg-white border rounded-xl px-5 py-5 shadow-lg"
+          >
+            <img
+              src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/em-soup-img.png?updatedAt=1747070704629"
+              alt="menu image"
+              class="rounded-xl"
+            />
+            <p class="text-[18px] leading-[22px] text-gray-800 font-medium">
+              Soups
+            </p>
+            <div class="flex items-center gap-2">
+              <a href="#" class="flex items-center gap-1">
+                <button
+                  class="text-yellow-500 hover:text-blue-500 hover:underline"
+                >
+                  View All
+                </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="#f59e0b"
+                  stroke="#f59e0b"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-move-right-icon"
+                >
+                  <path d="M18 8l4 4-4 4M2 12h20"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- Menu Item Card 4 -->
+          <div
+            class="flex flex-col gap-3 bg-white border rounded-xl px-5 py-5 shadow-lg"
+          >
+            <img
+              src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/em-grilled-seafood-img.png?updatedAt=1747070520653"
+              alt="menu image"
+              class="rounded-xl"
+            />
+            <p class="text-[18px] leading-[22px] text-gray-800 font-medium">
+              Fish & Sea food
+            </p>
+            <div class="flex items-center gap-2">
+              <a href="#" class="flex items-center gap-1">
+                <button
+                  class="text-yellow-500 hover:text-blue-500 hover:underline"
+                >
+                  View All
+                </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="#f59e0b"
+                  stroke="#f59e0b"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-move-right-icon"
+                >
+                  <path d="M18 8l4 4-4 4M2 12h20"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- Menu Item Card 5 -->
+          <div
+            class="flex flex-col gap-3 bg-white border rounded-xl px-5 py-5 shadow-lg"
+          >
+            <img
+              src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/em-hyderabadi-biryani-img.png?updatedAt=1747070552750"
+              alt="menu image"
+              class="rounded-xl"
+            />
+            <p class="text-[18px] leading-[22px] text-gray-800 font-medium">
+              Main Course
+            </p>
+            <div class="flex items-center gap-2">
+              <a href="#" class="flex items-center gap-1">
+                <button
+                  class="text-yellow-500 hover:text-blue-500 hover:underline"
+                >
+                  View All
+                </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="#f59e0b"
+                  stroke="#f59e0b"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-move-right-icon"
+                >
+                  <path d="M18 8l4 4-4 4M2 12h20"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- Menu Item Card 6 -->
+          <div
+            class="flex flex-col gap-3 bg-white border rounded-xl px-5 py-5 shadow-lg"
+          >
+            <img
+              src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/em-mushroom-noodles-img.png?updatedAt=1747070609363"
+              alt="menu image"
+              class="rounded-xl"
+            />
+            <p class="text-[18px] leading-[22px] text-gray-800 font-medium">
+              Noodles
+            </p>
+            <div class="flex items-center gap-2">
+              <a href="#" class="flex items-center gap-1">
+                <button
+                  class="text-yellow-500 hover:text-blue-500 hover:underline"
+                >
+                  View All
+                </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="#f59e0b"
+                  stroke="#f59e0b"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-move-right-icon"
+                >
+                  <path d="M18 8l4 4-4 4M2 12h20"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- Menu Item Card 7 -->
+          <div
+            class="flex flex-col gap-3 bg-white border rounded-xl px-5 py-5 shadow-lg"
+          >
+            <img
+              src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/em-gluten-img.png?updatedAt=1747070639528"
+              alt="menu image"
+              class="rounded-xl"
+            />
+            <p class="text-[18px] leading-[22px] text-gray-800 font-medium">
+              Salads
+            </p>
+            <div class="flex items-center gap-2">
+              <a href="#" class="flex items-center gap-1">
+                <button
+                  class="text-yellow-500 hover:text-blue-500 hover:underline"
+                >
+                  View All
+                </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="#f59e0b"
+                  stroke="#f59e0b"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-move-right-icon"
+                >
+                  <path d="M18 8l4 4-4 4M2 12h20"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- Menu Item Card 8 -->
+          <div
+            class="flex flex-col gap-3 bg-white border rounded-xl px-5 py-5 shadow-lg"
+          >
+            <img
+              src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/em-coffee-bourbon-img.png?updatedAt=1747070664711"
+              alt="menu image"
+              class="rounded-xl"
+            />
+            <p class="text-[18px] leading-[22px] text-gray-800 font-medium">
+              Desserts
+            </p>
+            <div class="flex items-center gap-2">
+              <a href="#" class="flex items-center gap-1">
+                <button
+                  class="text-yellow-500 hover:text-blue-500 hover:underline"
+                >
+                  View All
+                </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="#f59e0b"
+                  stroke="#f59e0b"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-move-right-icon"
+                >
+                  <path d="M18 8l4 4-4 4M2 12h20"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Menu Section End -->
+
+    <!-- Section Fresh Section -->
+    <section class="py-10 bg-[#f7faff]">
+      <div class="container mx-auto flex flex-col items-center">
+        <!-- Image -->
+        <div
+          class="w-[75%] md:w-[95%] mx-auto mt-5 grid grid-cols-1 md:grid-cols-2"
+        >
+          <div class="flex justify-center">
+            <img
+              src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/healthy-food-plate-img.png?updatedAt=1747051344915"
+              alt="Healthy Food Plate"
+              class="rounded-lg w-[250px] h-[250px] mb-5 object-cover"
+            />
+          </div>
+
+          <!-- Text Content -->
+          <div class="flex flex-col gap-4 items-start max-w-lg">
+            <h2
+              class="text-[28px] leading-[34px] text-[#183656] font-[Roboto] font-bold"
+            >
+              Fresh, Healthy, Organic, Delicious Fruits
+            </h2>
+            <p
+              class="font-[Roboto] leading-[26px] text-[16px] text-[#5a7184] mt-4"
+            >
+              Say no to harmful chemicals and go fully organic with our range of
+              fresh fruits and veggies. Pamper your body and your senses with
+              the true and unadulterated gifts from mother nature. with the true
+              and unadulterated gifts from mother nature.
+            </p>
+            <button
+              class="bg-[#C4A901] px-5 py-2 mt-3 hover:border hover:border-black text-white rounded-lg hover:bg-yellow-600 transition-colors"
+            >
+              Watch Video
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Fresh Section End -->
+
+    <!-- Section Delivery and Payment -->
+    <section class="py-10">
+      <div class="container mx-auto">
+        <!-- Content Wrapper -->
+        <div
+          class="w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center"
+        >
+          <!-- Text Content -->
+          <div class="flex flex-col gap-4 items-start order-2 md:order-1">
+            <h2
+              class="text-[28px] leading-[34px] text-[#183656] font-[Roboto] font-bold"
+            >
+              Delivery and Payment
+            </h2>
+            <p
+              class="font-[Roboto] leading-[24px] text-[16px] text-[#5a7184] mt-4"
+            >
+              Enjoy hassle-free payment with the plentitude of payment options
+              available for you. Get live tracking and locate your food on a
+              live map. It's quite a sight to see your food arrive at your door.
+              Plus, you get a 5% discount on every order every time you pay
+              online.
+            </p>
+            <button
+              class="bg-[#C4A901] px-5 py-2 mt-4 text-white hover:border hover:border-black rounded-lg hover:bg-yellow-600 transition-colors"
+            >
+              Order Now
+            </button>
+
+            <!-- Payment Icons -->
+            <div class="flex gap-12 mt-4">
+              <img
+                src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/visa-card-img.png?updatedAt=1747062467092"
+                alt="payment image"
+                class="h-[65px] w-[65px]"
+              />
+              <img
+                src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/master-card-img.png?updatedAt=1747062589083"
+                alt="payment image"
+                class="h-[65px] w-[65px]"
+              />
+              <img
+                src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/american-express-img.png?updatedAt=1747062559478"
+                alt="payment image"
+                class="h-[65px] w-[65px]"
+              />
+            </div>
+          </div>
+          <!-- Image Section -->
+          <div class="flex justify-center items-center order-1 md:order-2">
+            <img
+              src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/delivery-payment-section-img.png?updatedAt=1747062409010"
+              alt="payment discount image"
+              class="w-[270px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Delivery and Payment end -->
+
+    <!-- Section Thank You Section -->
+    <section class="py-10 bg-[#F7E7B2]">
+      <div class="container mx-auto">
+        <!-- Content Wrapper -->
+        <div
+          class="w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 items-center"
+        >
+          <!-- Text Content -->
+          <div class="flex flex-col gap-4 items-start justify-center">
+            <h2
+              class="text-[20px] lg:text-[34px] leading-[34px] text-[#183656] font-[Roboto] font-bold"
+            >
+              Thank you for being a valuable customer to us.
+            </h2>
+            <p class="font-[Roboto] leading-[24px] text-[16px] text-[#5a7184]">
+              We have a surprise gift for you!
+            </p>
+            <button
+              class="bg-[#C4A901] px-5 py-2 mt-4 text-white rounded-lg hover:bg-yellow-600 hover:border hover:border-black transition-colors"
+            >
+              Redeem Gift
+            </button>
+          </div>
+
+          <!-- Image Section -->
+          <div class="flex flex-row justify-center">
+            <img
+              src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/thanking-customers-section-img.png?updatedAt=1747065019868"
+              alt="gift section image"
+              class="w-[250px] h-[300px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Thank You Section End-->
+    <!-- Section Follow -->
+    <section class="py-10">
+      <!-- Main Container -->
+      <div class="2xl:container mx-auto">
+        <!-- Follow Us Container -->
+        <div class="w-[90%] mx-auto grid grid-cols-1 gap-4">
+          <div class="flex justify-center">
+            <p class="text-[24px] leading-[38px] text-[#183b56] font-bold">
+              Follow Us
+            </p>
+          </div>
+          <div class="flex justify-center gap-5">
+            <!-- Facebook Icon -->
+            <div class="bg-[#efce69] rounded-full p-5 hover:bg-[#d4b14f]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="#333333"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-facebook"
+              >
+                <path
+                  d="M18 2h-3a4 4 0 00-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 011-1h3z"
+                />
+              </svg>
+            </div>
+            <!-- Twitter Icon -->
+            <div class="bg-[#efce69] rounded-full p-5 hover:bg-[#d4b14f]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="#333333"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-twitter"
+              >
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 2a4.48 4.48 0 00-4.15 6.28A12.94 12.94 0 013 4s-4 9 5 13a12.94 12.94 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                />
+              </svg>
+            </div>
+            <!-- Instagram Icon -->
+            <div class="bg-[#efce69] rounded-full p-5 hover:bg-[#d4b14f]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="#333333"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-instagram"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path
+                  d="M16 11.37A4 4 0 1112.63 8a4 4 0 013.37 3.37zM17.5 6.5h.01"
+                />
+              </svg>
+            </div>
+            <!-- LinkedIn Icon -->
+            <div class="bg-[#efce69] rounded-full p-5 hover:bg-[#d4b14f]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="#333333"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-linkedin"
+              >
+                <path
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Follow End -->
+
+    <!-- Section Footer Section -->
+    <footer class="pt-10">
+      <div class="2xl:container mx-auto bg-[#000253] py-10 flex justify-center">
+        <div class="w-[75%] mx-auto flex flex-col items-center gap-5">
+          <!-- Logo Section -->
+          <div class="flex justify-center">
+            <img
+              src="https://ik.imagekit.io/m57vnn8nm/MERN%20/Food%20Store/food-munch-img.png?updatedAt=1746849816598"
+              alt="Footer Logo"
+              class="w-[50px] h-[50px]"
+            />
+          </div>
+
+          <!-- Contact Information -->
+          <div class="text-center">
+            <p class="text-[#959ead] font-medium font-[Roboto]">
+              orderfood@foodmunch.com
+            </p>
+            <p class="text-[#959ead] font-[Roboto]">
+              123 Ayur Vigyan Nagar, New Delhi, India.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Section Footer Section End-->
+    <!-- Script of Navigation -->
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+
+      // Toggle the mobile menu and change the icon on click
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+
+        // Toggle between menu and cross icon
+        if (mobileMenu.classList.contains("hidden")) {
+          menuIcon.innerHTML = `
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            `;
+        } else {
+          menuIcon.innerHTML = `
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            `;
+        }
+      });
+    </script>
+  </body>
+</html>

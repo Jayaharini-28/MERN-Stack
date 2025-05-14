@@ -10,32 +10,33 @@
 </head>
 <body>
     <div class="login-main-container">
-        <!-- Login Form -->
-        <div class="login-form bg-white p-6 rounded-lg shadow-lg flex flex-col items-center gap-4">
-            <h1 class="text-2xl font-[Poppins]">Login</h1>
-            <p class="text-sm font-[Poppins]">Enter your credentials</p>
-
-            <!-- Login Form Starts -->
-            <form id="loginForm" class="flex flex-col gap-3">
+        <div class="login-form">
+            <h1>Welcome Back</h1>
+            <p>Login to continue your journey</p>
+            
+            <form id="loginForm" class="flex flex-col">
                 <!-- Username Input -->
-                <input type="text" id="username" placeholder="Username (4-12 alphanumeric)" class="input-box p-2 border border-gray-300 rounded w-full" />
-                <!-- Error Message for Username -->
-                <div id="usernameError" class="text-red-600 text-sm"></div>
+                <input type="text" id="username" placeholder="Username (4-12 alphanumeric)" 
+                       class="input-box" required
+                       pattern="[A-Za-z0-9]{4,12}" />
+                <div id="usernameError" class="error-message"></div>
 
                 <!-- Password Input -->
-                <input type="password" id="password" placeholder="Password (6-15, letters & numbers)" class="input-box p-2 border border-gray-300 rounded w-full" />
-                <!-- Error Message for Password -->
-                <div id="passwordError" class="text-red-600 text-sm"></div>
+                <input type="password" id="password" placeholder="Password (6-15 characters)" 
+                       class="input-box" required
+                       pattern="[A-Za-z0-9]{6,15}" />
+                <div id="passwordError" class="error-message"></div>
 
                 <!-- Confirm Password Input -->
-                <input type="password" id="confirmPassword" placeholder="Confirm Password" class="input-box p-2 border border-gray-300 rounded w-full" />
-                <!-- Error Message for Confirm Password -->
-                <div id="confirmPasswordError" class="text-red-600 text-sm"></div>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" 
+                       class="input-box" required />
+                <div id="confirmPasswordError" class="error-message"></div>
 
                 <!-- Login Button -->
-                <button type="submit" class="login-button bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full">
+                <button type="submit" class="login-button">
                     Login
                 </button>
+        
             </form>
         </div>
     </div>

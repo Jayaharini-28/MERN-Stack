@@ -24,17 +24,17 @@ Main container styling for Index */
 } 
 /* Main container styling for Index and Login */
 .login-main-container {
-    background-image: url("https://ik.imagekit.io/m57vnn8nm/MERN%20/tourist/sea-ocean?updatedAt=1745510334114");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 350px;
-    height: 650px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+  background-image: url("https://ik.imagekit.io/m57vnn8nm/MERN%20/tourist/sea-ocean?updatedAt=1745510334114");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border-radius: 20px;
+} 
 /* Login Form Styling */
 .login-form {
     width: 300px;

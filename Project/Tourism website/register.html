@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-gray-100">
+    <!-- Register Container -->
+    <div class="register-container max-w-lg mx-auto p-8 bg-white rounded-lg shadow-lg">
+      <h1 id="place-name" class="text-[24px] font-bold text-blue-700 mb-6">Register</h1>
+
+      <!-- Registration Form -->
+      <form id="registerForm" class="flex flex-col gap-4">
+        <!-- Full Name Input -->
+        <input
+          type="text"
+          id="fullName"
+          placeholder="Full Name"
+          class="p-2 border border-gray-300 rounded"
+        />
+        <!-- Error message for Full Name -->
+        <div id="fullNameError" class="text-red-600 text-sm"></div>
+
+        <!-- Email Input -->
+        <input
+          type="email"
+          id="email"
+          placeholder="Email"
+          class="p-2 border border-gray-300 rounded"
+        />
+        <!-- Error message for Email -->
+        <div id="emailError" class="text-red-600 text-sm"></div>
+
+        <!-- Phone Number Input -->
+        <input
+          type="text"
+          id="phoneNumber"
+          placeholder="Phone Number"
+          class="p-2 border border-gray-300 rounded"
+        />
+        <!-- Error message for Phone Number -->
+        <div id="phoneNumberError" class="text-red-600 text-sm"></div>
+
+        <!-- Register Button -->
+        <button type="submit" class="bg-blue-500 text-white p-2 rounded">
+          Register
+        </button>
+      </form>
+
+      <!-- Back Button -->
+      <a href="./places.html">
+        <button class="bg-black text-white w-full py-2 rounded-md mt-4">Back</button>
+      </a>
+    </div>
+  </body>
+</html>

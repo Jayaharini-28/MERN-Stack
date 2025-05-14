@@ -1,9 +1,115 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* Centering the entire page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
+}
+/* 
+Main container styling for Index */
 .big-main-container {
   background-image: url("https://ik.imagekit.io/m57vnn8nm/MERN%20/tourist/sea-ocean?updatedAt=1745510334114");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border-radius: 20px;
+} 
+/* Main container styling for Index and Login */
+.login-main-container {
+    background-image: url("https://ik.imagekit.io/m57vnn8nm/MERN%20/tourist/sea-ocean?updatedAt=1745510334114");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* Login Form Styling */
+.login-form {
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+input:invalid {
+    border-color: #e53e3e;
+}
+
+input:valid {
+    border-color: #38a169;
+}
+
+/* Input Box Styling */
+.input-box {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Button Styling */
+.login-button {
+    background-color: #09C1EB;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #007ea7;
+}
+
+/* Error message styling */
+#errorMessages p {
+    margin: 2px;
+    padding: 2px;
+}
+
+/* Reverted Place page size */
 .place-main-container {
   background-image: url("https://ik.imagekit.io/m57vnn8nm/MERN%20/tourist/taj-mahal?updatedAt=1745510397329");
-  background-size: contain;
+  width: 350px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-size: cover;
   background-repeat: no-repeat;
+}
+
+.register-container {
+  background-image: url("https://ik.imagekit.io/m57vnn8nm/MERN%20/tourist/taj-mahal?updatedAt=1745510397329");
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.error-message {
+    color: #e53e3e;
+    margin-top: 4px;
+    font-size: 0.875rem;
+    font-weight: bold;
 }

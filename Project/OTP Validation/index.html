@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OTP Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .otp-display {
+      background-color: #09c1eb;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 20px;
+      margin-top: 20px;
+      display: none; /* Initially hidden */
+    }
+
+    .timer {
+      font-size: 18px;
+      margin-top: 10px;
+      color: red;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      margin: 10px 0;
+      width: 80%;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #09c1eb;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:disabled {
+      background-color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>OTP Validation</h2>
+    <form id="otp-form">
+      <input type="text" id="phoneNumber" placeholder="Enter Phone Number" required />
+      <button type="submit">Get OTP</button>
+    </form>
+    <div id="otpDisplay" class="otp-display"></div>
+    <input type="text" id="otpInput" placeholder="Enter OTP" required />
+    <button id="submitOtpBtn" disabled>Submit OTP</button>
+    <div id="timer" class="timer"></div>
+  </div>
+
+  <script>
+    let otpTimeout;
+
+    // Function to generate OTP
+    function generateOtp() {
+      const otp = Math.floor(100000 + Math.random() * 900000).toString(); // Generate a 6-digit OTP
+      console.log("Generated OTP:", otp); // For debugging
+
+      // Show the OTP on the page
+      const otpDisplay = document.getElementById("otpDisplay");
+      otpDisplay.textContent = `Your OTP: ${otp}`;
+      otpDisplay.style.display = 'block'; // Show OTP
+
+      // Store OTP in localStorage to validate later
+      localStorage.setItem('generatedOtp', otp);
+
+      // Enable the OTP input and submit button
+      document.getElementById("submitOtpBtn").disabled = false;
+
+      // Start the timer for 10 seconds
+      startTimer(10);
+    }
+
+    // Timer function to handle countdown
+    function startTimer(seconds) {
+      let remainingTime = seconds;
+      const timerDisplay = document.getElementById("timer");
+
+      // Update the timer display every second
+      otpTimeout = setInterval(() => {
+        timerDisplay.textContent = `Time left: ${remainingTime}s`;
+        remainingTime--;
+
+        // If time is up, disable the submit button and prompt for re-entry
+        if (remainingTime < 0) {
+          clearInterval(otpTimeout);
+          timerDisplay.textContent = "Time's up! Please re-enter.";
+          document.getElementById("submitOtpBtn").disabled = true;
+        }
+      }, 1000);
+    }
+
+    // OTP Form Submit Handler
+    document.getElementById("otp-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      generateOtp(); // Generate OTP when the form is submitted
+    });
+
+    // OTP Validation Handler
+    document.getElementById("submitOtpBtn").addEventListener("click", function () {
+      const enteredOtp = document.getElementById("otpInput").value.trim();
+      const storedOtp = localStorage.getItem("generatedOtp");
+
+      if (enteredOtp === storedOtp) {
+        alert("OTP validated successfully!");
+        // Optionally reset or navigate to the next page
+      } else {
+        alert("Invalid OTP. Please try again.");
+      }
+    });
+  </script>
+</body>
+</html>

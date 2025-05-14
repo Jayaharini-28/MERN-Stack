@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Tourism Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+</head>
+<body>
+    <div class="login-main-container flex items-center justify-center min-h-screen bg-gray-100">
+        <!-- Login Form -->
+        <div class="login-form bg-white p-6 rounded-lg shadow-lg flex flex-col items-center gap-4">
+            <h1 class="text-2xl font-[Poppins]">Login</h1>
+            <p class="text-sm font-[Poppins]">Enter your credentials</p>
+
+            <!-- Login Form Starts -->
+            <form id="loginForm" class="flex flex-col gap-3 w-full">
+                <!-- Username Input -->
+                <input type="text" id="username" placeholder="Username (4-12 alphanumeric)" class="input-box p-2 border border-gray-300 rounded w-full" />
+                <!-- Error Message for Username -->
+                <div id="usernameError" class="text-red-600 text-sm"></div>
+
+                <!-- Password Input -->
+                <input type="password" id="password" placeholder="Password (6-15, letters & numbers)" class="input-box p-2 border border-gray-300 rounded w-full" />
+                <!-- Error Message for Password -->
+                <div id="passwordError" class="text-red-600 text-sm"></div>
+
+                <!-- Confirm Password Input -->
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" class="input-box p-2 border border-gray-300 rounded w-full" />
+                <!-- Error Message for Confirm Password -->
+                <div id="confirmPasswordError" class="text-red-600 text-sm"></div>
+
+                <!-- Login Button -->
+                <button type="submit" class="login-button bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 w-full">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
